@@ -52,7 +52,7 @@ export default function App() {
 
 
   const finishGeneration = async () => {
-    const PIXABAY_API_KEY = '58521670-1d2089f614b8620767b1c8284';
+    const PIXABAY_API_KEY = import.meta.env.VITE_PIXABAY_API_KEY;
     
     // Clean the prompt: grab just the first 2-3 main words to ensure Pixabay finds a match
     const cleanKeywords = prompt.split(' ').slice(0, 2).join(' ').replace(/[^a-zA-Z0-9 ]/g, "");
